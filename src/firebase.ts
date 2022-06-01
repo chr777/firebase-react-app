@@ -1,16 +1,23 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
-const firebaseConfig = {  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  measurementId: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
-}
+const firebaseConfig = {
+  apiKey: "AIzaSyAGAAE2z988cNq8YCuVv525z9NmIZRb2gM",
+  authDomain: "testwicastr.firebaseapp.com",
+  projectId: "testwicastr",
+  storageBucket: "testwicastr.appspot.com",
+  messagingSenderId: "46104204321",
+  appId: "1:46104204321:web:6253ecbe827be47f0bbf60",
+  measurementId: "G-XHQC1GT22Y"
+};
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const analytics = getAnalytics(app);
+const app = initializeApp(firebaseConfig)
+
+export const auth = getAuth(app)
+
+export const analytics = getAnalytics(app)
+
+export default app
